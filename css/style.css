@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body, html {
+    min-height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 3%;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav a {
+    margin: 0 8px;
+}
+
+.lupa {
+    cursor: pointer;
+    background-image: url(../img/search.svg);
+    width: 27px;
+    height: 27px;
+    margin: 0 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.inicio {
+    padding: 3px 0 0 3%;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio-esquerdo {
+    width: 50%;
+}
+
+.inicio-esquerdo .inicio-imagem {
+    position: relative;
+    bottom: 200px;
+}
+
+.inicio-esquerdo .inicio-titulo {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.inicio-texto {
+    width: 70%;
+}
+
+.inicio .inicio-imagem {
+    border-top: 55px solid black;
+    border-bottom: 55px solid black;
+    border-left: 90px solid black;
+    padding: 300px 0;
+    width: 50%;
+}
+
+.inicio-button-scroll-dawn {
+    position: relative;
+    background-color: blue;
+}
+
+.principais-fontes {
+    padding: 70px 3%;
+    text-align: center;
+}
+
+.principais-fontes-titulo {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.principais-fontes-cards > a > div {
+    box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.cards-titulo {
+    color: #000;
+    position: relative;
+    top: 500px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.cards-img {
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+}
+
+#cards-solar {
+    background-image: url(img/solar.jpg);
+    background-repeat: no-repeat;
+}
+
+.principais-fontes .pf-card {
+    width: 350px;
+    height: 600px;
+    background-color: #EEEEEE;
+    display: inline-block;
+    margin: 15px;
+}
+
+.graficos {
+    padding: 80px 3% 130px 3%;
+    text-align: center;
+}
+
+.graficoPizza {
+    display: inline-block;
+    margin: 0 130px;
+}
+
+.secoes {
+    padding: 40px 3%;
+}
+
+.secoes > div {
+    margin: 40px 0;
+}
+
+.secao-titulo {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.secao-conteudo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20vh;
+}
+
+.secao-texto {
+    width: 35%;
+    min-width: 400px;
+}
+
+.secao-imagem {
+    width: 30%;
+    min-width: 450px;
+    height: 300px;
+    background-color: #EEEEEE;
+}
+
+.secao2 .secao-imagem {
+    order: 2;
+}
+
+@media (max-width: 968px) {
+    .secao-conteudo{
+        justify-content: center;
+    }
+    .secao-imagem{
+        margin: 15px 0;
+    }
+}
+
+.calculadora {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 3%;
+}
+
+.calculadora-resultado {
+    width: 400px;
+    height: 250px;
+    background-color: white;
+    margin: 0 30px;
+}
+
+.calculadora-inputs {
+    height: 250px;
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora-inputs input {
+    margin: 10px 0;
+    padding: 13px;
+    padding-right: 50px;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+}
+
+.calculadora-inputs input[type="button"] {
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 13px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 3%;
+    background-color: black;
+    color: white;
+}
+
+footer > a {
+    color: white;
+    text-decoration: none;
+    user-select: none;
+}
+
+.logo-rodape {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navegacao-rodape {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+}
+
+.redes-sociais-titulo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.redes-sociais a {
+    text-decoration: none;
+    color: white;
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+.nav-rodape {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+    border-left: 1px solid white;
+    padding-left: 30px;
+    margin-left: 0;
+}
+
+.nav-rodape-titulo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-rodape a {
+    text-decoration: none;
+    color: white;
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+.lupawhite {
+    background-image: url(../img/search-white.svg);
+    margin-top: 10px;
+}

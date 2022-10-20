@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <title>EnR</title>
+
+        <script>
+            google.charts.load('current', {packages: ['corechart']});
+            function desenharPizza() {
+                var tabela = new google.visualization.DataTable();
+                tabela.addColumn('string', 'categorias');
+                tabela.addColumn('number', 'valores');
+                tabela.addRows([
+                    ['Biomassa',8.2],
+                    ['Eólica',10.6],
+                    ['Solar',2.47],
+                    ['Carvão e derivados',3.9],
+                    ['Gás natural',12.8],
+                    ['Derivados de petróleo',3],
+                    ['Nuclear',2.2],
+                    ['Hidráulica',56.8]
+                ]);
+
+                var options = {
+                    /*'title': 'Oferta Interna de Energia Elétrica por Fonte',*/
+                    'height': 250,
+                    'width': 400,
+                    /*'is3D': true,*/
+                }
+
+                var grafico = new google.visualization.PieChart(document.getElementById('graficoPizza'));
+                grafico.draw(tabela, options);
+            }
+            google.charts.setOnLoadCallback(desenharPizza);
+        </script>
+    </head>
+    <body id="body">
+        <header>
+            <a href="#"><div class="logo">EnR</div></a>
+            <nav>
+                <a href="html/beneficios.html">Benefícios</a>
+                <a href="#footer">Contato</a>
+                <a href="html/sobre-nos.html">Sobre nós</a>
+            </nav>
+            <div class="lupa"></div>
+        </header>
+
+        <main>
+            <div class="inicio">
+                <div class="inicio-esquerdo">
+                    <div class="inicio-titulo">Energias Renováveis</div>
+                    <div class="inicio-texto">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut alias impedit nobis quis vero illo ullam ipsa, laudantium sunt? Quis hic tempore est? Quisquam corporis saepe impedit nemo nam quaerat!
+                    </div>
+                </div>
+                <div class="inicio-imagem">
+                    <img src="">
+                </div>
+            </div>
+
+            <div class="principais-fontes">
+                <div class="principais-fontes-titulo">Conheça mais sobre as principais fontes renováveis</div>
+                <div class="principais-fontes-cards">
+                    <a href="#"><div id="cards-solar" class="pf-card card1"><div class="cards-titulo">Energia Solar</div></div></a>
+                    <a href="#"><div id="cards-eolica" class="pf-card card2"><div class="cards-titulo">Energia Eólica</div></div></a>
+                    <a href="#"><div id="cards-hidreletrica" class="pf-card card3"><div class="cards-titulo">Energia Hidrelétrica</div></div></a>
+                    <a href="#"><div id="cards-biomassa" class="pf-card card4"><div class="cards-titulo">Energia Biomassa</div></div></a>
+                </div>
+            </div>
+
+            <div class="secoes">
+                <div class="secao1">
+                    <div class="secao-titulo">Energia Solar</div>
+                    <div class="secao-conteudo">
+                        <div class="secao-imagem"></div>
+                        <div class="secao-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, sapiente repellendus pariatur et voluptatum quisquam tempore neque distinctio voluptates non cupiditate adipisci dolores nihil voluptatibus! Voluptatibus illum repellendus ducimus esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a expedita excepturi dolorum ex hic voluptas accusamus, iusto soluta id libero sint voluptatum deserunt necessitatibus. Nisi sapiente voluptatem laudantium laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus modi sunt repellendus, aspernatur tempore explicabo neque corrupti praesentium similique ab aliquam? Debitis vel maiores eaque odio aspernatur. Quod, harum animi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, accusamus odio! Aliquid id magnam, cumque ab quod laboriosam dolores maiores excepturi laudantium adipisci omnis quidem sapiente dicta enim, obcaecati ipsam!</div>
+                    </div>
+                </div>
+                <div class="secao2">
+                    <div class="secao-titulo">Energia Eólica</div>
+                    <div class="secao-conteudo">
+                        <div class="secao-imagem"></div>
+                        <div class="secao-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, sapiente repellendus pariatur et voluptatum quisquam tempore neque distinctio voluptates non cupiditate adipisci dolores nihil voluptatibus! Voluptatibus illum repellendus ducimus esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a expedita excepturi dolorum ex hic voluptas accusamus, iusto soluta id libero sint voluptatum deserunt necessitatibus. Nisi sapiente voluptatem laudantium laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus modi sunt repellendus, aspernatur tempore explicabo neque corrupti praesentium similique ab aliquam? Debitis vel maiores eaque odio aspernatur. Quod, harum animi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, accusamus odio! Aliquid id magnam, cumque ab quod laboriosam dolores maiores excepturi laudantium adipisci omnis quidem sapiente dicta enim, obcaecati ipsam!</div>
+                    </div>
+                </div>
+                <div class="secao3">
+                    <div class="secao-titulo">Energia Hidrelétrica</div>
+                    <div class="secao-conteudo">
+                        <div class="secao-imagem"></div>
+                        <div class="secao-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, sapiente repellendus pariatur et voluptatum quisquam tempore neque distinctio voluptates non cupiditate adipisci dolores nihil voluptatibus! Voluptatibus illum repellendus ducimus esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a expedita excepturi dolorum ex hic voluptas accusamus, iusto soluta id libero sint voluptatum deserunt necessitatibus. Nisi sapiente voluptatem laudantium laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus modi sunt repellendus, aspernatur tempore explicabo neque corrupti praesentium similique ab aliquam? Debitis vel maiores eaque odio aspernatur. Quod, harum animi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, accusamus odio! Aliquid id magnam, cumque ab quod laboriosam dolores maiores excepturi laudantium adipisci omnis quidem sapiente dicta enim, obcaecati ipsam!</div>
+                    </div>
+                </div>
+                <div class="secao4">
+                    <div class="secao-titulo">Energia de Biomassa</div>
+                    <div class="secao-conteudo">
+                        <div class="secao-imagem"></div>
+                        <div class="secao-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, sapiente repellendus pariatur et voluptatum quisquam tempore neque distinctio voluptates non cupiditate adipisci dolores nihil voluptatibus! Voluptatibus illum repellendus ducimus esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a expedita excepturi dolorum ex hic voluptas accusamus, iusto soluta id libero sint voluptatum deserunt necessitatibus. Nisi sapiente voluptatem laudantium laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus modi sunt repellendus, aspernatur tempore explicabo neque corrupti praesentium similique ab aliquam? Debitis vel maiores eaque odio aspernatur. Quod, harum animi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, accusamus odio! Aliquid id magnam, cumque ab quod laboriosam dolores maiores excepturi laudantium adipisci omnis quidem sapiente dicta enim, obcaecati ipsam!</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            <div class="graficos">
+                <div id="graficoPizza"></div>
+            </div>
+
+            <!--<div class="calculadora">
+                <div class="calculadora-resultado"></div>
+                <div class="calculadora-inputs">
+                    <input type="text" placeholder="Valor">
+                    <input type="text" placeholder="Valor">
+                    <input type="text" placeholder="Valor">
+                    <input type="button" value="Calcular">
+                </div>
+            </div>-->
+        </main>
+
+        <footer id="footer" style="border-top: 1px solid white;">
+            <a href="#body"><div class="logo-rodape">EnR</div></a>
+            <div class="navegacao-rodape">
+                <div class="redes-sociais">
+                    <div class="redes-sociais-titulo">Redes Sociais</div>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">E-mail</a>
+                    <a href="#">Youtube</a>
+                </div>
+                <div class="nav-rodape">
+                    <div class="nav-rodape-titulo">Navegação</div>
+                    <a href="#">Benefícios</a>
+                    <a href="#footer">Contato</a>
+                    <a href="#">Sobre nós</a>
+                    <div class="lupa lupawhite"></div>
+                </div>
+            </div>
+            <div class="margin"></div>
+        </footer>
+    </body>
+</html>

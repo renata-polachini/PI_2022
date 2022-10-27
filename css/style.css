@@ -51,6 +51,10 @@ header nav a {
     background-size: contain;
 }
 
+.menu-hamburguer {
+    display: none;
+}
+
 .inicio {
     padding: 3px 0 0 3%;
     display: flex;
@@ -63,9 +67,9 @@ header nav a {
     width: 50%;
 }
 
-.inicio-esquerdo .inicio-imagem {
+.inicio-esquerdo, .inicio-imagem {
     position: relative;
-    bottom: 200px;
+    bottom: 60px;
 }
 
 .inicio-esquerdo .inicio-titulo {
@@ -80,7 +84,7 @@ header nav a {
 .inicio .inicio-imagem {
     border-top: 55px solid black;
     border-bottom: 55px solid black;
-    border-left: 90px solid black;
+    border-left: 70px solid black;
     padding: 300px 0;
     width: 50%;
 }
@@ -181,15 +185,6 @@ header nav a {
     order: 2;
 }
 
-@media (max-width: 968px) {
-    .secao-conteudo{
-        justify-content: center;
-    }
-    .secao-imagem{
-        margin: 15px 0;
-    }
-}
-
 .calculadora {
     background-color: black;
     display: flex;
@@ -269,7 +264,6 @@ footer > a {
 .redes-sociais a {
     text-decoration: none;
     color: white;
-    margin-left: 7px;
     margin-top: 5px;
 }
 
@@ -287,14 +281,37 @@ footer > a {
     font-size: 20px;
 }
 
+.redes-sociais-titulo, .nav-rodape-titulo {
+    margin-bottom: 10px;
+}
+
 .nav-rodape a {
     text-decoration: none;
     color: white;
-    margin-left: 7px;
     margin-top: 5px;
 }
 
 .lupawhite {
     background-image: url(../img/search-white.svg);
     margin-top: 10px;
+}
+
+@media (max-width: 968px) {
+    .secao-conteudo{
+        justify-content: center;
+    }
+    .secao-imagem{
+        margin: 15px 0;
+    }
+}
+
+/* Ajustar o conteúdo para Smartphones */
+@media screen and (max-width: 500px) {
+    header nav {
+        display: none;
+    }
+
+    .inicio-imagem {
+        display: none;
+    }
 }

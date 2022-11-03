@@ -10,10 +10,14 @@
 
         <script> 
             google.charts.load('current', {packages: ['corechart']});
+
+            // função que desenha o gráfico
             function desenharPizza() {
                 var tabela = new google.visualization.DataTable();
+                // adiciona as colunas 'categorias' e 'valores'
                 tabela.addColumn('string', 'categorias');
                 tabela.addColumn('number', 'valores');
+                // valores
                 tabela.addRows([
                     ['Biomassa',8.2],
                     ['Eólica',10.6],
@@ -25,14 +29,18 @@
                     ['Hidráulica',56.8]
                 ]);
 
+                // passando valores opcionais, como altura e largura do gráfico
                 var options = {
-                    /*'title': 'Oferta Interna de Energia Elétrica por Fonte',*/
+                    //'title': 'Oferta Interna de Energia Elétrica por Fonte',
                     'height': 900,
                     'width': 900,
-                    /*'is3D': true,*/
+                    //'is3D': true,
                 }
 
+                // direciona ao div graficoPizza
                 var grafico = new google.visualization.PieChart(document.getElementById('graficoPizza'));
+
+                //desenha o gráfico
                 grafico.draw(tabela, options);
             }
             google.charts.setOnLoadCallback(desenharPizza);
@@ -54,11 +62,9 @@
 
         <main>
             <div class="inicio">
-                <div class="inicio-esquerdo">
-                    <div class="inicio-titulo">Energias Renováveis</div>
-                    <div class="inicio-texto">
-                        O futuro das próximas gerações
-                    </div>
+                <div class="inicio-titulo">
+                    <h1>Energias Renováveis</h1>
+                    <h2>O futuro das próximas gerações</h2>
                 </div>
                 <div class="inicio-imagem"></div>
             </div>
@@ -82,9 +88,9 @@
                             <p>A energia solar é uma energia que vem da natureza, podemos dizer isso porque ela é extraída do sol. É uma fonte de energia totalmente natural que não polui nada do meio ambiente.</p>
                             <p>Existem dois tipos de energia solar no mundo, que seria a fotovoltaica e a térmica, essas energias são produzidas pelo calor (sol) e são 100% limpas.</p>
                             <p>A energia solar é um sucesso toda vez que é adquirida, pois pode ser usada por meio de diversas tecnologias, como painéis fotovoltaicos, usinas heliotérmicas e aquecedores solares.</p>
-                            <h3>Fotovoltaica</h3>
+                            <h3><b>Fotovoltaica</b></h3>
                             <p>A energia fotovoltaica é transformada diretamente da radiação solar em energia elétrica. É extraída por meio das células fotovoltaicas, que são compostas por silício, que absorvem a luz do sol. Os elétrons do material condutor são transportados até serem captados por um campo elétrico. A densidade da luz depende muito das nuvens, se elas estão postas ou não, pois se não tiver calor ou frio com sol, não haverá energia com sua potência máxima. Hoje essa energia está tomando um crescimento surpreendente, cada dia ela cresce mais por sua eficiência e sustentabilidade na hora de uso.</p>
-                            <h3>Heliotérmica</h3>
+                            <h3><b>Heliotérmica</b></h3>
                             <p>No caso desta energia, ela traz o aquecimento da água usada em hotéis, casas, etc. Para que esse aquecimento aconteça, é preciso de placas, que parecem espelhos, pelas quais o calor reflete e assim ele é transformado em um líquido que é aquecido pela luz solar refletida nos painéis.</p>
                             <p>Esse líquido é responsável pelo armazenamento de calor, aquecendo a água nas usinas e, assim, produzindo o vapor que movimenta as turbinas, provocando o acionamento de geradores, que produzem essa energia.</p>
                             <p>Essa energia é muito boa para todo o Brasil e para o mundo, mas para ela ter um desempenho perfeito, precisa de dias seguidos de calor ou de frio com sol, pois assim a energia funciona perfeitamente.</p>
@@ -153,17 +159,15 @@
             <div class="navegacao-rodape">
                 <div class="redes-sociais">
                     <div class="redes-sociais-titulo">Redes Sociais</div>
-                    <a href="#">Facebook</a>
+                    <a href="https://www.facebook.com">Facebook</a>
                     <a href="#">Instagram</a>
-                    <a href="#">E-mail</a>
-                    <a href="#">Youtube</a>
+                    <a href="mailto:enrwebsite@gmail.com">E-mail</a>
                 </div>
                 <div class="nav-rodape">
                     <div class="nav-rodape-titulo">Navegação</div>
                     <a href="#">Benefícios</a>
                     <a href="#footer">Contato</a>
                     <a href="#">Sobre nós</a>
-                    <div class="lupa lupawhite"></div>
                 </div>
             </div>
             <div class="margin"></div>

@@ -5,18 +5,17 @@
 
 .beneficios-titulo {
     text-align: center;
-    margin-bottom: 50px;
 }
 
 .beneficios-titulo h1 {
     font-size: 40px;
+    margin-top: 50px;
 }
 
 .beneficios-conteudo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 0;
 }
 
 .beneficios-texto-esquerdo, .beneficios-texto-direito {
@@ -26,7 +25,10 @@
 .beneficios-imagem {
     width: 500px;
     height: 600px;
-    background-color: #EEEEEE;
+    background-image: url(../img/energias.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .vantagens-desvantagens {

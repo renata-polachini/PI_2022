@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
     box-sizing: border-box;
@@ -21,6 +22,7 @@ header {
 }
 
 header .logo {
+    display: inline-block;
     font-size: 28px;
     font-weight: bold;
 }
@@ -42,10 +44,10 @@ header nav a {
 
 .lupa {
     cursor: pointer;
-    background-image: url(../img/search.svg);
     width: 27px;
     height: 27px;
     margin: 0 8px;
+    background-image: url(../img/search.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -90,8 +92,11 @@ header nav a {
     border-top: 55px solid black;
     border-bottom: 55px solid black;
     border-left: 70px solid black;
-    padding: 300px 0;
     width: 50%;
+    /*background-image: url(../img/inicio-energias.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;*/
 }
 
 .inicio-button-scroll-dawn {
@@ -115,22 +120,40 @@ header nav a {
 }
 
 .cards-titulo {
-    color: #000;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
     position: relative;
-    top: 500px;
+    top: 520px;
     font-weight: bold;
     font-size: 25px;
 }
 
-.cards-img {
-    height: 50px;
-    width: 50px;
-    background-color: blue;
+#cards-solar, #cards-eolica, #cards-hidreletrica, #cards-biomassa {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#cards-hidreletrica > .cards-titulo {
+    color: ;
 }
 
 #cards-solar {
-    background-image: url(img/solar.jpg);
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, transparent 0%, #000 300%), url(../img/solar.png);
+}
+
+#cards-eolica {
+    background-image: linear-gradient(to bottom, transparent 0%, #000 300%), url(../img/eolica.png);
+}
+
+#cards-hidreletrica {
+    background-image: linear-gradient(to bottom, transparent 0%, #000 500%), url(../img/hidreletrica.png);
+}
+
+#cards-biomassa {
+    background-image: linear-gradient(to bottom, transparent 0%, #000 300%), url(../img/biomassa.png);
 }
 
 .principais-fontes .pf-card {
@@ -301,11 +324,6 @@ footer > a {
     color: white;
     margin-top: 5px;
 }
-
-/*.lupawhite {
-    background-image: url(../img/search-white.svg);
-    margin-top: 10px;
-}*/
 
 /* Ajustar o conteúdo para Smartphones */
 @media screen and (max-width: 500px) {

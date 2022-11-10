@@ -17,7 +17,7 @@
                 // adiciona as colunas 'categorias' e 'valores'
                 tabela.addColumn('string', 'categorias');
                 tabela.addColumn('number', 'valores');
-                // valores
+                // dados
                 tabela.addRows([
                     ['Biomassa',8.2],
                     ['Eólica',10.6],
@@ -48,7 +48,7 @@
     </head>
     <body id="body">
         <header>
-            <a href="#"><div class="logo">EnR</div></a>
+            <a href="../index.html"><div class="logo">EnR</div></a>
             <nav>
                 <a href="html/beneficios.html">Benefícios</a>
                 <a href="#footer">Contato</a>
@@ -66,21 +66,21 @@
                     <h1>Energias Renováveis</h1>
                     <h2>O futuro das próximas gerações</h2>
                 </div>
-                <div class="inicio-imagem"></div>
+                <img src="/img/inicio-energias.png" class="inicio-imagem">
             </div>
 
             <div class="principais-fontes">
                 <div class="principais-fontes-titulo">Conheça mais sobre as principais fontes renováveis</div>
                 <div class="principais-fontes-cards">
-                    <a href="#"><div id="cards-solar" class="pf-card card1"><div class="cards-titulo">Energia Solar</div></div></a>
-                    <a href="#"><div id="cards-eolica" class="pf-card card2"><div class="cards-titulo">Energia Eólica</div></div></a>
-                    <a href="#"><div id="cards-hidreletrica" class="pf-card card3"><div class="cards-titulo">Energia Hidrelétrica</div></div></a>
-                    <a href="#"><div id="cards-biomassa" class="pf-card card4"><div class="cards-titulo">Energia Biomassa</div></div></a>
+                    <a href="#secao-solar"><div id="cards-solar" class="pf-card card1"><div class="cards-titulo">Energia Solar</div></div></a>
+                    <a href="#secao-eolica"><div id="cards-eolica" class="pf-card card2"><div class="cards-titulo">Energia Eólica</div></div></a>
+                    <a href="#secao-hidreletrica"><div id="cards-hidreletrica" class="pf-card card3"><div class="cards-titulo">Energia Hidrelétrica</div></div></a>
+                    <a href="#secao-biomassa"><div id="cards-biomassa" class="pf-card card4"><div class="cards-titulo">Energia de Biomassa</div></div></a>
                 </div>
             </div>
 
             <div class="secoes">
-                <div class="secao1">
+                <div id="secao-solar" class="secao1">
                     <div class="secao-titulo">Energia Solar</div>
                     <div class="secao-conteudo">
                         <div class="secao-imagem"></div>
@@ -99,7 +99,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="secao2">
+                <div id="secao-eolica" class="secao2">
                     <div class="secao-titulo">Energia Eólica</div>
                     <div class="secao-conteudo">
                         <div class="secao-imagem"></div>
@@ -110,7 +110,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="secao3">
+                <div id="secao-hidreletrica" class="secao3">
                     <div class="secao-titulo">Energia Hidrelétrica</div>
                     <div class="secao-conteudo">
                         <div class="secao-imagem"></div>
@@ -122,7 +122,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="secao4">
+                <div id="secao-biomassa" class="secao4">
                     <div class="secao-titulo">Energia de Biomassa</div>
                     <div class="secao-conteudo">
                         <div class="secao-imagem"></div>

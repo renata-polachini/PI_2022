@@ -19,7 +19,6 @@ header {
     align-items: center;
     height: 80px;
     padding: 0 3%;
-    background-color: #F5F7FC;
     z-index: 20;
 }
 
@@ -27,7 +26,6 @@ header .logo {
     display: inline-block;
     font-size: 28px;
     font-weight: bold;
-    background-color: #F5F7FC;
 }
 
 header a {
@@ -43,7 +41,6 @@ header nav {
 
 header nav a {
     margin: 0 15px;
-    font-weight: bold;
     letter-spacing: 1px;
 }
 
@@ -68,7 +65,6 @@ header nav a {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: #F5F7FC;
 }
 
 /* IMAGEM DE FUNDO PARA A TELA DE INÍCIO, QUANDO ABILITADA AFETA A NAV BAR, TORNANDO A NAVEGAÇÃO IMPOSSÍVEL
@@ -127,19 +123,37 @@ header nav a {
     width: 50%;
 }
 
-.inicio-button-scroll-dawn {
-    position: relative;
-    background-color: blue;
-}
-
 .introducao {
-    background-color: aqua;
     height: 100vh;
 }
 
 .introducao-titulo {
     font-weight: bold;
     font-size: 40px;
+    text-align: center;
+    padding: 15vh 0 100px 0;
+}
+
+.introducao > p {
+    width: 60vw;
+    margin: 0 auto 5px auto;
+}
+
+.introducao-button {
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/button-duplo-baixo.png);
+    margin: 10px auto 0 auto;
+}
+
+.introducao-button-titulo {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 35vh;
 }
 
 .principais-fontes {
@@ -170,25 +184,25 @@ header nav a {
     font-size: 25px;
 }
 
-#cards-solar, #cards-eolica, #cards-hidreletrica, #cards-biomassa {
+#cards-solar, #cards-eolica, #cards-hidreletrica, #cards-biomassa, #secao-img-solar, #secao-img-eolica, #secao-img-hidreletrica, #secao-img-biomassa {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-#cards-solar {
+#cards-solar, #secao-img-solar{
     background-image: linear-gradient(to bottom, transparent 0%, #000 300%), url(../img/solar.png);
 }
 
-#cards-eolica {
+#cards-eolica, #secao-img-eolica {
     background-image: linear-gradient(to bottom, transparent 0%, #000 300%), url(../img/eolica.png);
 }
 
-#cards-hidreletrica {
+#cards-hidreletrica, #secao-img-hidreletrica {
     background-image: linear-gradient(to bottom, transparent 0%, #000 500%), url(../img/hidreletrica.png);
 }
 
-#cards-biomassa {
+#cards-biomassa, #secao-img-biomassa {
     background-image: linear-gradient(to bottom, transparent 0%, #000 300%), url(../img/biomassa.png);
 }
 
@@ -200,26 +214,9 @@ header nav a {
     margin: 15px;
 }
 
-.graficos {
-    padding: 80px 3% 130px 3%;
-    text-align: center;
-}
-
-.graficoPizza {
-    display: inline-block;
-    margin: 0 130px;
-}
-
-.secao-titulo {
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 40px;
-}
-
 #secao-solar, #secao-eolica, #secao-hidreletrica, #secao-biomassa {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     padding-top: 8vh;
 }
 
@@ -228,15 +225,22 @@ header nav a {
 }
 
 #secao-eolica {
-    background-color: aquamarine;
+    background-color: #dde6e9;
 }
 
 #secao-hidreletrica {
-
+    background-color: #dff5f1;
 }
 
 #secao-biomassa {
+    background-color: #e1f4de;
+}
 
+.secao-titulo {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
 }
 
 .secao-conteudo {
@@ -249,7 +253,6 @@ header nav a {
 
 .secao-texto {
     width: 35%;
-    min-width: 400px;
 }
 
 .secao-texto h3 {
@@ -259,52 +262,41 @@ header nav a {
 }
 
 .secao-imagem {
-    width: 450px;
-    height: 100%;
+    width: 350px;
+    height: 600px;
     background-color: #000;
+    box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
-.secao2 .secao-imagem {
+.secao2 .secao-imagem, .secao4 .secao-imagem {
     order: 2;
 }
 
-.calculadora {
-    background-color: black;
+.grafico {
+    height: 110vh;
+}
+
+.grafico-titulo {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.grafico-conteudo {
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
-    padding: 40px 3%;
+    flex-wrap: wrap;
 }
 
-.calculadora-resultado {
-    width: 400px;
-    height: 250px;
-    background-color: white;
-    margin: 0 30px;
+.grafico-texto {
+    width: 35%;
 }
 
-.calculadora-inputs {
-    height: 250px;
-    margin: 0 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.calculadora-inputs input {
-    margin: 10px 0;
-    padding: 13px;
-    padding-right: 50px;
-    border: 0;
-    border-radius: 5px;
-    outline: none;
-}
-
-.calculadora-inputs input[type="button"] {
-    cursor: pointer;
-    border-radius: 30px;
-    padding: 13px;
+.grafico-imagem {
+    width: 850px;
+    height: 850px;
 }
 
 footer {
@@ -382,6 +374,115 @@ footer > a {
 
     .inicio-imagem {
         display: none;
+    }
+
+    .introducao-titulo {
+        padding: 5vh 0 50px 0;
+        font-size: 30px;
+    }
+
+    .introducao > p {
+        width: 80vw;
+        margin: 0 auto 5px auto;
+    }
+
+    .introducao-button {
+        height: 40px;
+        width: 40px;
+        position: relative;
+        bottom: 20vh;
+    }
+    
+    .introducao-button-titulo {
+        font-size:15px;
+        position: relative;
+        bottom: 20vh;
+    }
+
+    .principais-fontes-titulo {
+        font-size: 30px;
+        padding: 0;
+        position: relative;
+        bottom: 8vh;
+    }
+
+    .principais-fontes-cards {
+        position: relative;
+        bottom: 8vh;
+    }
+
+    .secoes {
+        margin-top: 2000px;
+    }
+
+    .secao-imagem {
+        display: none;
+    }
+
+    .secao-titulo {
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+
+    .secao-texto {
+        width: 80%;
+        margin: 0 auto 5px auto;
+    }
+
+    .secao-conteudo {
+        margin-bottom: 5vh;
+    }
+
+    #secao-solar, #secao-eolica, #secao-hidreletrica, #secao-biomassa {
+        height: auto;
+        width: 100%;
+        background-color: #FFF;
+    }
+
+    .grafico-titulo {
+        font-size: 30px;
+        border-top: 10px;
+    }
+
+    .grafico-texto {
+        width: 80%;
+        margin: 0 auto 10vh auto;
+    }
+
+    .grafico-conteudo {
+        margin-top: 30px;
+    }
+
+    .grafico-imagem {
+        display: none;
+    }
+
+    footer {
+        display: block;
+        margin-top: 20vh;
+    }
+
+    .navegacao-rodape {
+        display: block;
+        margin-left: 10vw;
+    }
+
+    .nav-rodape {
+        border: none;
+        padding-left: 0;
+    }
+
+    .logo-rodape {
+        margin-left: 10vw;
+        margin-bottom: 30px;
+    }
+
+    .redes-sociais, .nav-rodape {
+        margin-left: 0;
+    }
+
+    .redes-sociais-titulo, .nav-rodape-titulo {
+        margin-top: 15px;
     }
 }
 

@@ -1,0 +1,21 @@
+main {
+    height: 75vh;
+}
+
+.sobre-titulo {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.sobre-texto {
+    width: 80vw;
+    margin: 20px auto 5px auto;
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        height: 35vh;
+    }
+}

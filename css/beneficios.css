@@ -1,7 +1,3 @@
-main {
-    background-color: #F5F7FC;
-}
-
 .beneficios {
     padding: 30px 3%;
     height: 100vh;
@@ -62,15 +58,6 @@ main {
     margin: 15px;
 }
 
-@media (max-width: 761px) {
-    .vantagens-desvantagens{
-        justify-content: center;
-    }
-    .vantagens-desvantagens ul{
-        text-align: justify;
-    }
-}
-
 .energia {
     display: flex;
     justify-content: space-between;
@@ -100,16 +87,33 @@ main {
     margin-left: 7px;
 }
 
-/*.energia-singularidades {
-    width: 10%;
-    text-align: center;
-}
+/* Ajustar o conteúdo para Smartphones */
+@media screen and (max-width: 500px) {
+    .beneficios-conteudo {
+        display: block;
+    }
 
-.energia-singularidades .s {
-    padding: 10px;
-    border-radius: 13px;
-    background-color: grey;
-    font-weight: bold;
-    color: white;
-    margin: 5px auto;
-}*/
+    .beneficios-titulo {
+        margin-bottom: 20px;
+    }
+
+    .beneficios-imagem {
+        display: none;
+    }
+
+    .beneficios-texto-esquerdo, .beneficios-texto-direito {
+        width: 80vw;
+        margin: 0 auto 5px auto;
+    }
+
+    .vantagens-desvantagens {
+        position: relative;
+        top: 20vh;
+        width: 80vw;
+        margin: 0 auto 5px auto;
+    }
+
+    .desvantagens {
+        margin-top: 20px;
+    }
+}

@@ -8,6 +8,46 @@
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript" src="/script/script.js"></script>
         <title>EnR</title>
+        <script>
+            // DESENHANDO O GRÁFICO ATRAVÉS DA GOOGLE CHARTS, UMA BIBLIOTECA DA API DE VISUALIZAÇÃO DE DADOS DA GOOGLE CHARTS ESCRITA EM JAVASCRIPT
+            google.charts.load('current', {packages: ['corechart']});
+
+            // função que desenha o gráfico
+            function desenharPizza() {
+                var tabela = new google.visualization.DataTable();
+                // adiciona as colunas 'categorias' e 'valores'
+                tabela.addColumn('string', 'categorias');
+                tabela.addColumn('number', 'valores');
+                // dados
+                tabela.addRows([
+                    ['Biomassa',8.2],
+                    ['Eólica',10.6],
+                    ['Solar',2.47],
+                    ['Carvão e derivados',3.9],
+                    ['Gás natural',12.8],
+                    ['Derivados de petróleo',3],
+                    ['Nuclear',2.2],
+                    ['Hidráulica',56.8]
+                ]);
+
+                // passando valores opcionais, como altura e largura do gráfico
+                var options = {
+                    //'title': 'Oferta Interna de Energia Elétrica por Fonte',
+                    'legend': 'right',
+                    'height': 850,
+                    'width': 850,
+                    'is3D': true,
+                    'colors': ['#2B6003', '#4bafd1', '#F5B545', '#8e8c87', '#7f6539', '#494742', '#ea88da', '#22738e']
+                }
+
+                // direciona ao div graficoPizza
+                var grafico = new google.visualization.PieChart(document.getElementById('graficoPizza'));
+
+                //desenha o gráfico
+                grafico.draw(tabela, options);
+            }
+            google.charts.setOnLoadCallback(desenharPizza);
+        </script>
     </head>
     <body id="body">
         <header>
@@ -17,12 +57,7 @@
                 <a href="#footer">Contato</a>
                 <a href="html/sobre-nos.html">Sobre nós</a>
             </nav>
-            <form id="searchForm" action="search();">
-                <div class="input-group">
-                   <input type="text" id="searchItem" class="form-control" placeholder="Suchbegriff">
-                   <button id="go" class="btn btn-default" type="button" onclick="document.getElementById('searchForm').submit(); return false;">Go</button>
-                </div>
-             </form>
+            <div></div>
             <div class="menu-hamburguer"></div>
         </header>
 
@@ -36,15 +71,17 @@
                 <img src="/img/inicio-energias.png" class="inicio-imagem">
             </div>
 
-            <div class="introducao">
+            <div id="slide1" class="introducao">
                 <div class="introducao-titulo">O que são as energias renováveis?</div>
                 <p>Energias renováveis são aquelas que vêm dos recursos naturais e quenão poluem o ar, como por exemplo a energia solar, a eólica, a hidrelétrica e a biomassa, pois são extraídas em pequenas quantidades da natureza.</p>
                 <p>A porcentagem de pessoas que usam essas energias é de 46,4%. Nesse sentido, espera-se que até o fim do ano de 2022 haja um aumento de 2,5%, já que o uso da energia renovável vem crescendo cada vez mais.</p>
                 <p>Os impulsionadores desse crescimento foram os políticos da China, União Europeia e América Latina. Essas regiões estão compensando os Estados Unidos que não apresenta crescimento frequente nessa área.</p>
                 <p>Em suma, as energias renováveis são muito importantes, pois trazem para nós um meio ambiente com ar mais limpo. Por esse motivo, essas energias vêm crescendo, porque melhoram nosso meio ambiente em prol de um futuro melhor.</p>
+                <div class="introducao-button-titulo">Veja mais</div>
+                <a href="#slide2"><div class="introducao-button"></div></a>
             </div>
 
-            <div id="slide1" class="principais-fontes">
+            <div id="slide2" class="principais-fontes">
                 <div class="principais-fontes-titulo">Conheça mais sobre as principais fontes renováveis</div>
                 <div class="principais-fontes-cards">
                     <a href="#secao-solar"><div id="cards-solar" class="pf-card card1"><div class="cards-titulo">Energia Solar</div></div></a>
@@ -58,7 +95,7 @@
                 <div id="secao-solar" class="secao1">
                     <div class="secao-titulo">Energia Solar</div>
                     <div class="secao-conteudo">
-                        <div class="secao-imagem"></div>
+                        <div id="secao-img-solar" class="secao-imagem"></div>
                         <div class="secao-texto">
                             <p>A energia solar é uma energia que vem da natureza, podemos dizer isso porque ela é extraída do sol. É uma fonte de energia totalmente natural que não polui nada do meio ambiente.</p>
                             <p>Existem dois tipos de energia solar no mundo, que seria a fotovoltaica e a térmica, essas energias são produzidas pelo calor (sol) e são 100% limpas.</p>
@@ -77,7 +114,7 @@
                 <div id="secao-eolica" class="secao2">
                     <div class="secao-titulo">Energia Eólica</div>
                     <div class="secao-conteudo">
-                        <div class="secao-imagem"></div>
+                        <div id="secao-img-eolica" class="secao-imagem"></div>
                         <div class="secao-texto">
                             <p>A energia eólica é obtida a partir do aproveitamento da energia cinéticados ventos, que é formada pelas massas de ar em movimento. A energia eólica é utilizada por turbinas eólicas, também conhecidas como aerogeradores. Neles, a força do vento é captada por hélices ligadas a uma turbina que aciona um gerador elétrico. É uma energia abundante, renovável e limpa.</p>
                             <p>No Brasil, a primeira turbina de energia eólica foi instalada em Fernando de Noronha, em Pernambuco, em 1992. Na época, a geração de energia elétrica correspondia a 10% da energia gerada e consumida na ilha (economizava 70 mil litros de óleo diesel por ano).</p>
@@ -88,7 +125,7 @@
                 <div id="secao-hidreletrica" class="secao3">
                     <div class="secao-titulo">Energia Hidrelétrica</div>
                     <div class="secao-conteudo">
-                        <div class="secao-imagem"></div>
+                        <div id="secao-img-hidreletrica" class="secao-imagem"></div>
                         <div class="secao-texto">
                             <p>A energia hidrelétrica é produzida pela força da água e representa 16% da energia gerada em todo o planeta, conforme indicam os dados da Agência Internacional de Energia (IEA, sigla em inglês). No Brasil, a energia hidrelétrica consiste na principal forma de energia que abastece as residências, indústrias e estabelecimentos, e responde por 67% da eletricidade gerada no país.</p>
                             <p>Existem três fatores que são importantes para essa energia acontecer: a represa, a barragem e a usina. Represa é onde se armazena a água, barragem é a infraestrutura de obra civil e usina é a construção onde estão localizados os grupos de geração.</p>
@@ -100,7 +137,7 @@
                 <div id="secao-biomassa" class="secao4">
                     <div class="secao-titulo">Energia de Biomassa</div>
                     <div class="secao-conteudo">
-                        <div class="secao-imagem"></div>
+                        <div id="secao-img-biomassa" class="secao-imagem"></div>
                         <div class="secao-texto">
                             <p>Biomassa é uma fonte de energia renovável que, hoje, no Brasil, possui uma taxa de 9% da população que já adquiriu; 90% das casas das regiões rurais dos países pobres utiliza energia da queima da biomassa, conforme indicam os dados da ANEEL; e cerca de 14% da energia consumida no mundo vem dos restos de matérias orgânicas (diversos vegetais, lenhosos, restos de animais, cascas e sementes de plantas, parte do lixo doméstico descartado, bagaço de cana-de-açúcar, entre outros).</p>
                             <p>Para produzir energia limpa e não poluir o meio ambiente, uma das formas de extrair a biomassa é por meio da pirólise (transformação por aquecimento de uma mistura), da gaseificação e da combustão. A biomassa, além de nos dar uma energia limpa, ainda gera óleos vegetais variados.</p>
@@ -112,21 +149,18 @@
                     </div>
                 </div>
             </div>
-            <div>
 
-            <div class="graficos">
-                <div id="graficoPizza"></div>
-            </div>
-
-            <!--<div class="calculadora">
-                <div class="calculadora-resultado"></div>
-                <div class="calculadora-inputs">
-                    <input type="text" placeholder="Valor">
-                    <input type="text" placeholder="Valor">
-                    <input type="text" placeholder="Valor">
-                    <input type="button" value="Calcular">
+            <div class="grafico">
+                <div class="grafico-titulo">Energias utilizadas no Brasil</div>
+                <div class="grafico-conteudo">
+                    <div class="grafico-texto">
+                        <p>Quando o assunto são as fontes de energia usadas no Brasil, as renováveis merecem destaque especial. Afinal, o uso delas aqui no país é três vezes maior que no resto do mundo.</p>
+                        <p>O Brasil vem investindo suficiente em fontes de energias renováveis. Segundo o Ministério de Minas e Energia, em 2016 a participação de fontes renováveis na matriz energética brasileira foi de 43.5%. Considerando apenas a geração de energia elétrica, a participação de renováveis no Brasil totalizou 81.7%, enquanto o índice mundial é de pouco mais de 20%.</p>
+                        <p>A energia hidráulica, como observado no gráfico, corresponde a maior porcentagem, significando ser ainda mais utilizada. O gás natural é o segundo mais consumido, constituindo 12.8% no total, pois traz menos impacto ambiental. A terceira mais colocada é a eólica porque é uma fonte limpa e não traz tantos problemas. A quarta mais usufruída é a biomassa porque traz o reaproveito de resíduos que de outra forma seriam descartadas e é menos poluente. Carvão e derivados são utilizados (não quanto a hidráulica) porque fazem a queima do carvão mineral que emite à atmosfera gases poluentes, colaborando, então, para o agravamento do efeito estufa. O Petróleo não é tando utilizado como fonte de energia, pois é um combustível não renovável, fóssil e extremamente poluente, mas ele gera muita energia além de ser uma matéria-prima que pode ser utilizada para o desenvolvimento de inúmeros produtos. A nuclear é importante: ela garante segurança no fornecimento de energia elétrica. A última que é a solar, as condições climáticas favorecem o uso da energia solar e o sol é a nossa fonte maior de energia, pois é um recurso importante para o desenvolvimento da humanidade.</p>
+                    </div>
+                    <div id="graficoPizza" class="grafico-imagem"></div>
                 </div>
-            </div>-->
+            </div>
         </main>
 
         <footer id="footer">

@@ -6,45 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="/script/script.js"></script>
         <title>EnR</title>
-
-        <script> 
-            google.charts.load('current', {packages: ['corechart']});
-
-            // função que desenha o gráfico
-            function desenharPizza() {
-                var tabela = new google.visualization.DataTable();
-                // adiciona as colunas 'categorias' e 'valores'
-                tabela.addColumn('string', 'categorias');
-                tabela.addColumn('number', 'valores');
-                // dados
-                tabela.addRows([
-                    ['Biomassa',8.2],
-                    ['Eólica',10.6],
-                    ['Solar',2.47],
-                    ['Carvão e derivados',3.9],
-                    ['Gás natural',12.8],
-                    ['Derivados de petróleo',3],
-                    ['Nuclear',2.2],
-                    ['Hidráulica',56.8]
-                ]);
-
-                // passando valores opcionais, como altura e largura do gráfico
-                var options = {
-                    //'title': 'Oferta Interna de Energia Elétrica por Fonte',
-                    'height': 900,
-                    'width': 900,
-                    //'is3D': true,
-                }
-
-                // direciona ao div graficoPizza
-                var grafico = new google.visualization.PieChart(document.getElementById('graficoPizza'));
-
-                //desenha o gráfico
-                grafico.draw(tabela, options);
-            }
-            google.charts.setOnLoadCallback(desenharPizza);
-        </script>
     </head>
     <body id="body">
         <header>
@@ -54,10 +17,13 @@
                 <a href="#footer">Contato</a>
                 <a href="html/sobre-nos.html">Sobre nós</a>
             </nav>
-            <div class="lupa"></div>
-            <div class="menu-hamburguer">
-                <i class="material-icons">face</i>
-            </div>
+            <form id="searchForm" action="search();">
+                <div class="input-group">
+                   <input type="text" id="searchItem" class="form-control" placeholder="Suchbegriff">
+                   <button id="go" class="btn btn-default" type="button" onclick="document.getElementById('searchForm').submit(); return false;">Go</button>
+                </div>
+             </form>
+            <div class="menu-hamburguer"></div>
         </header>
 
         <main>
@@ -65,11 +31,20 @@
                 <div class="inicio-titulo">
                     <h1>Energias Renováveis</h1>
                     <h2>O futuro das próximas gerações</h2>
+                    <a href="#slide1"><div class="inicio-button"></div></a>
                 </div>
                 <img src="/img/inicio-energias.png" class="inicio-imagem">
             </div>
 
-            <div class="principais-fontes">
+            <div class="introducao">
+                <div class="introducao-titulo">O que são as energias renováveis?</div>
+                <p>Energias renováveis são aquelas que vêm dos recursos naturais e quenão poluem o ar, como por exemplo a energia solar, a eólica, a hidrelétrica e a biomassa, pois são extraídas em pequenas quantidades da natureza.</p>
+                <p>A porcentagem de pessoas que usam essas energias é de 46,4%. Nesse sentido, espera-se que até o fim do ano de 2022 haja um aumento de 2,5%, já que o uso da energia renovável vem crescendo cada vez mais.</p>
+                <p>Os impulsionadores desse crescimento foram os políticos da China, União Europeia e América Latina. Essas regiões estão compensando os Estados Unidos que não apresenta crescimento frequente nessa área.</p>
+                <p>Em suma, as energias renováveis são muito importantes, pois trazem para nós um meio ambiente com ar mais limpo. Por esse motivo, essas energias vêm crescendo, porque melhoram nosso meio ambiente em prol de um futuro melhor.</p>
+            </div>
+
+            <div id="slide1" class="principais-fontes">
                 <div class="principais-fontes-titulo">Conheça mais sobre as principais fontes renováveis</div>
                 <div class="principais-fontes-cards">
                     <a href="#secao-solar"><div id="cards-solar" class="pf-card card1"><div class="cards-titulo">Energia Solar</div></div></a>

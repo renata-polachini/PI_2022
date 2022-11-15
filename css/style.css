@@ -19,12 +19,15 @@ header {
     align-items: center;
     height: 80px;
     padding: 0 3%;
+    background-color: #F5F7FC;
+    z-index: 20;
 }
 
 header .logo {
     display: inline-block;
     font-size: 28px;
     font-weight: bold;
+    background-color: #F5F7FC;
 }
 
 header a {
@@ -39,7 +42,9 @@ header nav {
 }
 
 header nav a {
-    margin: 0 8px;
+    margin: 0 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .lupa {
@@ -47,7 +52,7 @@ header nav a {
     width: 27px;
     height: 27px;
     margin: 0 8px;
-    background-image: url(../img/search.svg);
+    background-image: url(../img/pesquisar-unscreen.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -63,7 +68,24 @@ header nav a {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: #F5F7FC;
 }
+
+/* IMAGEM DE FUNDO PARA A TELA DE INÍCIO, QUANDO ABILITADA AFETA A NAV BAR, TORNANDO A NAVEGAÇÃO IMPOSSÍVEL
+/*.inicio::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url(../img/inicio-energias.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.1;
+}*/
 
 .inicio-titulo {
     width: 50%;
@@ -88,15 +110,21 @@ header nav a {
     width: 70%;
 }
 
+.inicio-button {
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/inicio-button-unscreen.gif);
+    margin-top: 20px;
+}
+
 .inicio .inicio-imagem {
     border-top: 55px solid black;
     border-bottom: 55px solid black;
     border-left: 70px solid black;
     width: 50%;
-    /*background-image: url(../img/inicio-energias.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;*/
 }
 
 .inicio-button-scroll-dawn {
@@ -104,9 +132,21 @@ header nav a {
     background-color: blue;
 }
 
+.introducao {
+    background-color: aqua;
+    height: 100vh;
+}
+
+.introducao-titulo {
+    font-weight: bold;
+    font-size: 40px;
+}
+
 .principais-fontes {
-    padding: 70px 3%;
+    padding: 12vh 3%;
     text-align: center;
+    height: 100vh;
+    background-color: #F5F7FC;
 }
 
 .principais-fontes-titulo {
@@ -123,7 +163,7 @@ header nav a {
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #fff;
+    color: #FFF;
     position: relative;
     top: 520px;
     font-weight: bold;
@@ -134,10 +174,6 @@ header nav a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-}
-
-#cards-hidreletrica > .cards-titulo {
-    color: ;
 }
 
 #cards-solar {
@@ -174,19 +210,33 @@ header nav a {
     margin: 0 130px;
 }
 
-.secoes {
-    padding: 40px 3%;
-}
-
-.secoes > div {
-    margin: 40px 0;
-}
-
 .secao-titulo {
     font-weight: bold;
     text-align: center;
     margin-bottom: 50px;
     font-size: 40px;
+}
+
+#secao-solar, #secao-eolica, #secao-hidreletrica, #secao-biomassa {
+    height: 100vh;
+    width: 100vw;
+    padding-top: 8vh;
+}
+
+#secao-solar {
+    background-color: #F7F6DA;
+}
+
+#secao-eolica {
+    background-color: aquamarine;
+}
+
+#secao-hidreletrica {
+
+}
+
+#secao-biomassa {
+
 }
 
 .secao-conteudo {
@@ -209,10 +259,9 @@ header nav a {
 }
 
 .secao-imagem {
-    width: 30%;
-    min-width: 450px;
+    width: 450px;
     height: 100%;
-    background-color: #EEEEEE;
+    background-color: #000;
 }
 
 .secao2 .secao-imagem {

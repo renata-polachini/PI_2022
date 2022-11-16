@@ -14,8 +14,51 @@ main {
     margin: 20px auto 5px auto;
 }
 
+.feedback {
+    height: 20vh;
+    width: 30vw;
+    margin: 20vh auto 0 auto;
+}
+
+.feedback-titulo {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.feedback-button {
+    text-align: center;
+    padding: 5px 10px;
+    margin: 10px auto 0 auto;
+    border: 1px solid #000;
+    border-radius: 2px;
+}
+
+.feedback > input {
+    height: 100%;
+    width: 100%;
+}
+
+.feedback > input[type="text"]::placeholder {
+    text-align: start;
+}
+
+.feedback-button:hover {
+    font-weight: bold;
+}
+
 @media screen and (max-width: 500px) {
     main {
-        height: 35vh;
+        height: 65vh;
+    }
+
+    .sobre-texto {
+        width: 80vw;
+        margin: 20px auto 5px auto;
+    }
+
+    .feedback {
+        height: 20vh;
+        width: 80vw;
+        margin: 10vh auto 0 auto;
     }
 }
